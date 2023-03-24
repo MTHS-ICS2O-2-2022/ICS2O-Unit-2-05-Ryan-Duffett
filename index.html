@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8" />
-  <meta name="description" content="Calculating the area of a triangle with javascript." />
+  <meta name="description" content="Calculating taxes and salary using javascript." />
   <meta name="keywords" content="mths, ics2o" />
   <meta name="author" content="Ryan Duffett" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
@@ -13,7 +13,7 @@
   <link rel="icon" type="image/png" sizes="32x32" href="Tim-32x32.png" />
   <link rel="icon" type="image/png" sizes="16x16" href="Tim-16x16.png" />
   <link rel="manifest" href="site.webmanifest" />
-  <title>Triangle Area Calculator</title>
+  <title>Salary Calculator</title>
 </head>
 <body>
   <script defer src="https://code.getmdl.io/1.3.0/material.min.js"></script>
@@ -21,37 +21,27 @@
   <div class="mdl-layout mdl-js-layout mdl-layout--fixed-header">
     <header class="mdl-layout__header">
       <div class="mdl-layout__header-row">
-        <span class="mdl-layout-title">Area of a Triangle Calculator</span>
+        <span class="mdl-layout-title">Salary Calculator</span>
       </div>
     </header>
     <main class="mdl-layout__content">
-      <table>
-        <tr>
-          <th>
             <img src="TimIMG.JPG" alt="style" />
-          </th>
-          <th>
-            <h2>Area Formula</h2>
-            <h3>A = B x H/2</h3>
-          </th>
-        </tr>
-      </table>
-      <p>Enter your employment information..</p>
+      <p id="title">Enter your employment information..</p>
       <!-- Simple Textfield -->
       <form action="#">
-        <p>Base</p>
+        <p>Payment (/hour)</p>
         <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="base-of-triangle" />
-          <label class="mdl-textfield__label" for="base-of-triangle">base ...</label>
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="pay-per-hour" />
+          <label class="mdl-textfield__label" for="pay-per-hour">payment ...</label>
           <span class="mdl-textfield__error">Input is not a number!</span>
         </div>
       </form>
       <!-- Numeric Textfield -->
       <form action="#">
-        <p>Height</p>
+        <p>Hours Worked</p>
         <div class="mdl-textfield mdl-js-textfield">
-          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="height-of-triangle" />
-          <label class="mdl-textfield__label" for="height-of-triangle">height ...</label>
+          <input class="mdl-textfield__input" type="text" pattern="-?[0-9]*(\.[0-9]+)?" id="hours-worked" />
+          <label class="mdl-textfield__label" for="hours-worked">hours worked ...</label>
           <span class="mdl-textfield__error">Input is not a number!</span>
         </div>
       </form>
@@ -63,8 +53,8 @@
       </button>
       <br />
       <div id="answers">
-        <div id="area"></div>
-        <div id="perimeter"></div>
+        <div id="net-payment"></div>
+        <div id="tax"></div>
       </div>
     </main>
   </div>

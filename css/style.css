@@ -2,10 +2,14 @@
 * Created on: Sep 2020
 * This file contains the CSS for index.html
 */
+.mdl-layout__header-row {
+  align-items: center;
+  justify-content: center;
+}
+
 .mdl-layout__content {
   padding-left: 15pt;
   padding-right: 15pt;
-  padding-top: 15pt;
 }
 
 /* Due to error in MDL : https://github.com/google/material-design-lite/issues/5281
@@ -15,22 +19,21 @@
   opacity: 0.001;
 }
 
+#title {
+  font-size: 30px;
+  font-weight: bold;
+  padding-top: 10px;
+}
+
 body {
-  background-color: rgb(226 217 142);
+  background-color: rgb(225 218 172);
 }
 
 p {
-  color: white;
+  color: rgb(0 0 0);
   font-family: Helvetica, Arial, sans-serif;
   font-size: 1.5rem;
   padding-top: 5pt;
-}
-
-#button-answer {
-  padding-right: 15pt;
-  padding-top: 15pt;
-  color: rgb(135 135 135);
-  font-weight: bold;
 }
 
 img {
@@ -39,4 +42,5 @@ img {
   float: right;
   margin-bottom: 250px;
   margin-right: 100px;
+  margin-top: 10px
 }
