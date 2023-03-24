@@ -1,4 +1,42 @@
-/* Created by: Mr. Coxall
+/* Created by: Ryan Duffett
 * Created on: Sep 2020
 * This file contains the CSS for index.html
 */
+.mdl-layout__content {
+  padding-left: 15pt;
+  padding-right: 15pt;
+  padding-top: 15pt;
+}
+
+/* Due to error in MDL : https://github.com/google/material-design-lite/issues/5281
+*/
+.mdl-ripple {
+  background: #000;
+  opacity: 0.001;
+}
+
+body {
+  background-color: rgb(226 217 142);
+}
+
+p {
+  color: white;
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 1.5rem;
+  padding-top: 5pt;
+}
+
+#button-answer {
+  padding-right: 15pt;
+  padding-top: 15pt;
+  color: rgb(135 135 135);
+  font-weight: bold;
+}
+
+img {
+  max-width: 400px;
+  height: 400px;
+  float: right;
+  margin-bottom: 250px;
+  margin-right: 100px;
+}
